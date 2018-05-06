@@ -6,9 +6,10 @@ full_posts: 5
 
 {{ content }}
 <div>
-  <hr>
+  <br><br><hr>
   <h3>Recent Posts</h3>
   {% for post in site.posts limit:page.full_posts %}
+    <br><br><hr>
     <div class='post'>
       <span class='date'>{{post.date | date_to_string}}</span>
       <h1><a href='{{post.url}}'>{{post.title}}</a></h1>
@@ -16,7 +17,7 @@ full_posts: 5
       <a href='{{post.url}}#disqus_thread'>View Comments</a>
     </div>
   {% endfor %}
-  <hr>
+  <br><br><hr>
   <h3>Older Posts</h3>
   <table class='post-list'>
   {% for post in site.posts offset:page.full_posts %}
