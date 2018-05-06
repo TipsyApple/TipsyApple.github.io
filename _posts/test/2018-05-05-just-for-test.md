@@ -124,7 +124,7 @@ The final element.
 ```
 
 <div class="post">
-<div style="background-color:white; width:720px; margin: 0px 0 0 -60px;border-radius: 10px;box-shadow: 0px 0px 10px #000000;">
-<iframe src="https://www.bilibili.com/video/av10590361#bilibiliPlayer" frameborder="0" scrolling="no" width="700" height="700" style="margin: 0px 0 0 10px;"></iframe>
+<div style="background-color:white; width:680px; margin: 0px 0 0 -50px;border-radius: 10px;box-shadow: 0px 0px 10px #000000;border:10px solid rgba(0,0,0,0.7)">
+<iframe src="https://www.bilibili.com/video/av10590361/#bilibiliPlayer" frameborder="0" scrolling="no" width="680" height="600"></iframe>
 </div>
 </div>
