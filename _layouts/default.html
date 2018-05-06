@@ -34,7 +34,7 @@ full_posts: 5
   <div class='post'>
     <ul>
     {% for people in site.data.acknowledgments %}
-      <li><a href='{{ people.url }}'>{{ people.name }}</a></li>
+      <li><a href='{{ people.url }}'>{{ people.name }}</a><p>{{ people.intro }}</p></li>
     {% endfor %}
     </ul>
   </div>
