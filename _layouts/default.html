@@ -15,7 +15,7 @@ full_posts: 5
       <div class='body'>{{post.content}}</div>
       <a href='{{post.url}}#disqus_thread'>View Comments</a>
     </div>
-    <hr><br>
+    <br><hr><br>
   {% endfor %}
   <h3>Older Posts</h3>
   <table class='post-list'>
@@ -27,5 +27,12 @@ full_posts: 5
     </tr>
   {% endfor %}
   </table>
+</div>
+<div>
+  <br><hr>
+  <h3>Acknowledgments</h3>
+  <div class='post'>
+      <div class='body'>{{site.acknowledgments.content}}</div>
+  </div>
 </div>
 
