@@ -32,7 +32,11 @@ full_posts: 5
   <br><hr>
   <h3>Acknowledgments</h3>
   <div class='post'>
-      <div class='body'>{{site.acknowledgments.content}}</div>
+    <ul>
+    {% for people in site.data.acknowledgments %}
+      <li><a href=''>{{ people.url }}</a>{{ people.name }}</li>
+    {% endfor %}
+    </ul>
   </div>
 </div>
 
