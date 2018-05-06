@@ -1,6 +1,6 @@
 ---
 layout: post
-title: test
+title:just for test 4
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
