@@ -18,7 +18,7 @@ tail -n 14 nohup.out | grep -A 7 "iter:"
 ```
 Looks a bit complicated. Don't worry. I will explain one by one:
 
-```
+```bash
 tail FILE
 ``` 
 You can use ```man tail``` to see:
@@ -26,7 +26,7 @@ You can use ```man tail``` to see:
 
 Ugh... it seems that I didn't explain anything except copying the manual. I remain indifferent to it. just for fun. Don't say something useless, continue.
 
-```
+```bash
 tail -n NUM FILE
 ```
 output the last ```NUM``` lines.
@@ -37,19 +37,19 @@ P.S. The usage of ```head``` is the same, except that the output is the first fe
 - Input: ```ls -l | tail -n 1```
 - Output: ```drwxr-xr-x     7 tipsy   224  5  7 14:43 LabelVOC```
 
-```
+```bash
 grep -A NUM PATTERN
 ```
 ```A``` means ```After Context```, so you can also use ```--after-context=NUM``` instead.
 > Print NUM  lines  of  trailing  context  after  matching  lines.
 
-```
+```bash
 grep -B NUM PATTERN
 ```
 ```B``` means ```Before Context```. It can instead of ```--before-context```. Yep, similar to above.
 > Print NUM lines of leading context before matching lines.
 
-```
+```bash
 grep -C NUM PATTERN
 ```
 ```C``` means ```Context```. I don't wanna say more. It just makes the above two commands work together.
@@ -61,7 +61,7 @@ nohup unzip /dir/zipfile.zip -o -d /dir_you_want > unzip.info.txt 2>&1 &
 ```
 hah, more complicated than last one. 
 
-```
+```bash
 nohup
 ``` 
 one of the shell buildin commands which maybe means ```no hungup```. it sets the signal SIGHUP to be ignored. As a result, it will not be terminated when you logout from ssh. In short:
@@ -69,19 +69,19 @@ one of the shell buildin commands which maybe means ```no hungup```. it sets the
 
 > If standard output is a terminal, append output to 'nohup.out' if possible, '$HOME/nohup.out' otherwise. If standard error is a terminal, redirect it to standard output.
 
-```
+```bash
 unzip /dir/zipfile.zip -o
 ```
 can creates ZIP archives. ```-o``` means **overwrite** existing files without promping. ```-d /dir_you_want```: An optional directory to which to extract files. By default, will be created in the current directory. ```
 
-```
+```bash
 > redirected_standard_output_file
 ```
 It redirects standard output to this file, overwriting the file.
 
 P.S. ```>>``` will not overwrite instead of appending the redirected output at the end.
 
-```
+```bash
 2>&1
 ```
 seems mystery, but not at all. ```2``` and ```1``` just are two of **[file descriptor](https://en.wikipedia.org/wiki/File_descriptor)**. A file descriptor is a non-negative integer. ```2``` represents standard error, while ```1``` represents standard output. the last number ```0``` represents standard input. the '&' tells system '1' represents standard output rather than file named '1'. 
@@ -89,7 +89,7 @@ seems mystery, but not at all. ```2``` and ```1``` just are two of **[file descr
 
 P.S. ```2>&1``` call the ```dup2(1,2)```, I could not tell you more, search it if interest.
 
-```
+```bash
 &
 ```
 the last symbol which can start the program as a background job.
