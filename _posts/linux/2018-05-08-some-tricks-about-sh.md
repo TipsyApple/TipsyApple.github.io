@@ -12,7 +12,10 @@ For example:
 
 P.S. When using upper case...em...I mean using ```wc -L``` which you can get the number of bytes in the longest row. It's true, I've tried.😂
 
-## 2. ```tail -n 14 nohup.out | grep -A 7 "iter:"```
+## 2. 
+```bash
+tail -n 14 nohup.out | grep -A 7 "iter:"
+```
 Looks a bit complicated. Don't worry. I will explain one by one:
 
 ```
@@ -52,7 +55,10 @@ grep -C NUM PATTERN
 ```C``` means ```Context```. I don't wanna say more. It just makes the above two commands work together.
 > Print NUM lines of output context.
 
-## 3. ```nohup unzip /dir/zipfile.zip -o -d /dir_you_want > unzip.info.txt 2>&1 &```
+## 3. 
+```bash
+nohup unzip /dir/zipfile.zip -o -d /dir_you_want > unzip.info.txt 2>&1 &
+```
 hah, more complicated than last one. 
 
 ```
